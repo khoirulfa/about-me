@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Overpass:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+:root {
+   --primary: #22577A;
+   --secondary: #38A3A5;
+   --teal: #57CC99;
+   --lime: #80ED99;
+   --white: #fff;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Overpass', sans-serif;
+}
+
+.container {
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 50% auto;
+   grid-template-rows: 50px 100px auto;
+}
+
+/* .container .col {
+
+} */
+
+.container .col:nth-child(1){
+   height: 100vh;
+   overflow: scroll;
+   padding: 30px 50px;
+}
+
+.container .col:nth-child(1) .header {
+   padding: 10px 15px;
+   margin-top: 10px;
+}
+
+.container .col:nth-child(1) .header h2 {
+   font-family: 'Chivo', 'sans-serif';
+   color: var(--primary);
+   font-weight: 700;
+   margin-top: 20px;
+}
+
+.container .col:nth-child(1) .content-item {
+   margin: 10px 0;
+   padding: 10px 15px;
+}
+
+.container .col:nth-child(1) .content-item span{
+   opacity: .9;
+   display: block;
+}
+
+.container .col:nth-child(1) .content-item p {
+   margin: 10px 0 0;
+   padding-right: 30px;
+   line-height: 20px;
+}
+
+.container .col:nth-child(1) .content-item p:nth-child(2) {
+   margin-top: 20px;
+}
+
+.container .col:nth-child(2) {
+   position: relative;
+   min-height: 100vh;
+   padding: 30px 40px;
+   background: url(assets/img/photo.jpg) center -60px;
+   background-size: 100% auto ;
+}
+
+.container .col:nth-child(2)::after {
+   background: linear-gradient('to-top', rgba(0, 0, 0, 0.61) , rgba(255, 255, 255, 0));
+}
+
+.container .col:nth-child(2) .content {
+   position: absolute;
+   bottom: 70px;
+   color: var(--white);
+}
+
+.container .col:nth-child(2) .content h1 {
+   font-family: 'Chivo', 'sans-serif';
+   font-kerning: auto;
+}
+
+.container .col:nth-child(2) .content .subtitle {
+   opacity: .5;
+   font-weight: 300;
+   font-kerning: normal;
+}
+
+.container .col:nth-child(2) .content .links {
+   margin-top: 20px;
+}
+
+.container .col:nth-child(2) .content .links ul {
+   list-style: none;
+}
+
+.container .col:nth-child(2) .content .links ul li {
+   display: inline-block;
+   margin: 0 5px;
+}
+
+.container .col:nth-child(2) .content .links ul li a {
+   text-decoration: none;
+   color: var(--white);
+   opacity: .7;
+   font-size: 22px;
+}
+
+.container .col:nth-child(2) .content .links ul li a:hover {
+   opacity: 1;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
